@@ -35,6 +35,8 @@ namespace Muck_Cheat_Injector.Forms
             this.flatLabel2 = new FlatUI.FlatLabel();
             this.flatLabel1 = new FlatUI.FlatLabel();
             this.flatButton1 = new FlatUI.FlatButton();
+            this.flatClose1 = new FlatUI.FlatClose();
+            this.flatMini1 = new FlatUI.FlatMini();
             this.formSkin1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,6 +45,8 @@ namespace Muck_Cheat_Injector.Forms
             this.formSkin1.BackColor = System.Drawing.Color.White;
             this.formSkin1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
             this.formSkin1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
+            this.formSkin1.Controls.Add(this.flatMini1);
+            this.formSkin1.Controls.Add(this.flatClose1);
             this.formSkin1.Controls.Add(this.linkLabel2);
             this.formSkin1.Controls.Add(this.linkLabel1);
             this.formSkin1.Controls.Add(this.flatLabel2);
@@ -61,7 +65,7 @@ namespace Muck_Cheat_Injector.Forms
             // 
             // linkLabel2
             // 
-            this.linkLabel2.ActiveLinkColor = System.Drawing.Color.DarkRed;
+            this.linkLabel2.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
             this.linkLabel2.AutoSize = true;
             this.linkLabel2.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel2.Font = new System.Drawing.Font("Segoe UI", 20F);
@@ -77,6 +81,7 @@ namespace Muck_Cheat_Injector.Forms
             // 
             // linkLabel1
             // 
+            this.linkLabel1.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel1.Font = new System.Drawing.Font("Segoe UI", 20F);
@@ -130,6 +135,32 @@ namespace Muck_Cheat_Injector.Forms
             this.flatButton1.UseCustomColor = false;
             this.flatButton1.Click += new System.EventHandler(this.flatButton1_Click);
             // 
+            // flatClose1
+            // 
+            this.flatClose1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.flatClose1.BackColor = System.Drawing.Color.White;
+            this.flatClose1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(35)))), ((int)(((byte)(35)))));
+            this.flatClose1.Font = new System.Drawing.Font("Marlett", 10F);
+            this.flatClose1.Location = new System.Drawing.Point(573, 13);
+            this.flatClose1.Name = "flatClose1";
+            this.flatClose1.Size = new System.Drawing.Size(18, 18);
+            this.flatClose1.TabIndex = 5;
+            this.flatClose1.Text = "flatClose1";
+            this.flatClose1.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            // 
+            // flatMini1
+            // 
+            this.flatMini1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.flatMini1.BackColor = System.Drawing.Color.White;
+            this.flatMini1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(49)))));
+            this.flatMini1.Font = new System.Drawing.Font("Marlett", 12F);
+            this.flatMini1.Location = new System.Drawing.Point(549, 13);
+            this.flatMini1.Name = "flatMini1";
+            this.flatMini1.Size = new System.Drawing.Size(18, 18);
+            this.flatMini1.TabIndex = 6;
+            this.flatMini1.Text = "flatMini1";
+            this.flatMini1.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(243)))), ((int)(((byte)(243)))));
+            // 
             // CreditsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -155,5 +186,7 @@ namespace Muck_Cheat_Injector.Forms
         private FlatUI.FlatLabel flatLabel1;
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private FlatUI.FlatMini flatMini1;
+        private FlatUI.FlatClose flatClose1;
     }
 }
