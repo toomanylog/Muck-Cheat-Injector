@@ -69,5 +69,15 @@ namespace Muck_Cheat_Injector.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Icon ähnlich wie (Symbol).
+        /// </summary>
+        internal static System.Drawing.Icon Muck_Cheat_Logo {
+            get {
+                object obj = ResourceManager.GetObject("Muck_Cheat_Logo", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
     }
 }

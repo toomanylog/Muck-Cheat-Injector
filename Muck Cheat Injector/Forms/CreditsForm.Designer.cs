@@ -29,6 +29,7 @@ namespace Muck_Cheat_Injector.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreditsForm));
             this.formSkin1 = new FlatUI.FormSkin();
             this.flatMini1 = new FlatUI.FlatMini();
             this.flatClose1 = new FlatUI.FlatClose();
@@ -127,11 +128,11 @@ namespace Muck_Cheat_Injector.Forms
             this.flatLabel2.BackColor = System.Drawing.Color.Transparent;
             this.flatLabel2.Font = new System.Drawing.Font("Segoe UI", 20F);
             this.flatLabel2.ForeColor = System.Drawing.Color.White;
-            this.flatLabel2.Location = new System.Drawing.Point(129, 148);
+            this.flatLabel2.Location = new System.Drawing.Point(18, 152);
             this.flatLabel2.Name = "flatLabel2";
-            this.flatLabel2.Size = new System.Drawing.Size(345, 37);
+            this.flatLabel2.Size = new System.Drawing.Size(567, 37);
             this.flatLabel2.TabIndex = 2;
-            this.flatLabel2.Text = "Cheat Ideas made by Baum.";
+            this.flatLabel2.Text = "Cheat Ideas made by Baum(All of them#9095).";
             // 
             // flatLabel1
             // 
@@ -168,6 +169,7 @@ namespace Muck_Cheat_Injector.Forms
             this.ClientSize = new System.Drawing.Size(603, 450);
             this.Controls.Add(this.formSkin1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CreditsForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CreditsForm";

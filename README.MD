@@ -3,8 +3,8 @@ This is a [Cheat](https://github.com/DasJNNJ/Muck-Cheat) Injector for the Game M
 
 ## Features
 - Injection
-- Ejection
 - Credits
+- Auto Updater
 
 ## Future Updates
 *Note: This is a very stage of development so all the Ideas are in my and "All of them"'s native language, German.*
