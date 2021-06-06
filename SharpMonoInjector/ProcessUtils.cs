@@ -42,7 +42,7 @@ namespace SharpMonoInjector
 
             if (!Native.EnumProcessModulesEx(
                 handle, ptrs, 0, out int bytesNeeded, ModuleFilter.LIST_MODULES_ALL)) {
-                throw new InjectorException("Failed to enumerate process modules", new Win32Exception(Marshal.GetLastWin32Error()));
+                //throw new InjectorException("Failed to enumerate process modules", new Win32Exception(Marshal.GetLastWin32Error()));
             }
 
             int count = bytesNeeded / size;
@@ -50,7 +50,7 @@ namespace SharpMonoInjector
 
             if (!Native.EnumProcessModulesEx(
                 handle, ptrs, bytesNeeded, out bytesNeeded, ModuleFilter.LIST_MODULES_ALL)) {
-                throw new InjectorException("Failed to enumerate process modules", new Win32Exception(Marshal.GetLastWin32Error()));
+                //throw new InjectorException("Failed to enumerate process modules", new Win32Exception(Marshal.GetLastWin32Error()));
             }
 
             for (int i = 0; i < count; i++) {
