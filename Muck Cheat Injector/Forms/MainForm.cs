@@ -76,6 +76,8 @@ namespace Muck_Cheat_Injector.Forms
                             muckRunning = true;
                     }
 
+                    Thread.Sleep(2500);
+
                     try
                     {
                         Injector injector = new Injector("Muck");
