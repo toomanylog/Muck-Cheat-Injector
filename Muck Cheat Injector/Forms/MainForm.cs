@@ -1,6 +1,5 @@
 ﻿using System;
 using System.IO;
-using System.Threading;
 using System.Windows.Forms;
 using SharpMonoInjector;
 
@@ -8,9 +7,10 @@ namespace Muck_Cheat_Injector.Forms
 {
     public partial class MainForm : Form
     {
-
         private Injector injector;
         private IntPtr remoteAssembly = IntPtr.Zero;
+        private string @namespace = "Muck_Cheat",
+                       @class = "CheatLoader";
         public MainForm()
         {
             InitializeComponent();
@@ -59,7 +59,7 @@ namespace Muck_Cheat_Injector.Forms
                 byte[] assembly = File.ReadAllBytes(GetCheatDLL());
                 using (injector)
                 {
-                    remoteAssembly = injector.Inject(assembly, "Muck_Cheat", "CheatLoader", "main");
+                    remoteAssembly = injector.Inject(assembly, @namespace, @class, "main");
 
                     if (remoteAssembly != IntPtr.Zero) flatButton2.Show();
                 }
@@ -81,11 +81,15 @@ namespace Muck_Cheat_Injector.Forms
             }
             try
             {
-                injector.Eject(remoteAssembly, "Muck_Cheat", "ClassLoader", "Eject");
+                if (injector == null) injector = new Injector("Muck");
+                using(injector)
+                {
+                    injector.Eject(remoteAssembly, @namespace, @class, "eject");
+                }
             } catch(Exception ex)
             {
-                MessageBox.Show(null, "The Injection Failed: " + ex.Message,
-                    "Injection Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(null, "The Ejection Failed: " + ex.Message,
+                    "Ejection Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
